@@ -801,12 +801,12 @@ public abstract class AbstractBlockChain {
 
         int DiffMode = 1;
         if (params.getId().equals(NetworkParameters.ID_TESTNET)) {
-            if (storedPrev.getHeight()+1 >= 16) { DiffMode = 4; }
+            if (storedPrev.getHeight()+1 >= 1) { DiffMode = 4; }
         }
         else {
-            if (storedPrev.getHeight()+1 >= 68589) { DiffMode = 4; }
-            else if (storedPrev.getHeight()+1 >= 34140) { DiffMode = 3; }
-            else if (storedPrev.getHeight()+1 >= 15200) { DiffMode = 2; }
+            if (storedPrev.getHeight()+1 >= 2) { DiffMode = 4; }
+            else if (storedPrev.getHeight()+1 >= 1) { DiffMode = 3; }
+            else if (storedPrev.getHeight()+1 >= 2000) { DiffMode = 2; }
         }
 
         if (DiffMode == 1) { checkDifficultyTransitions_V1(storedPrev, nextBlock); return; }
@@ -1013,7 +1013,7 @@ public abstract class AbstractBlockChain {
         return bnNew.GetCompact();*/
     }
     private void DarkGravityWave3(StoredBlock storedPrev, Block nextBlock) {
-        /* current difficulty formula, darkcoin - DarkGravity v3, written by Evan Duffield - evan@darkcoin.io */
+        /* current difficulty formula, icash - DarkGravity v3, written by Evan Duffield - evan@icash.io */
         StoredBlock BlockLastSolved = storedPrev;
         StoredBlock BlockReading = storedPrev;
         Block BlockCreating = nextBlock;

@@ -21,16 +21,16 @@
   <parent>
     <groupId>com.google</groupId>
 
-    <artifactId>darkcoinj-parent</artifactId>
+    <artifactId>icashj-parent</artifactId>
     <version>0.12-SNAPSHOT</version>
 
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
-  <artifactId>darkcoinj-tools</artifactId>
+  <artifactId>icashj-tools</artifactId>
 
-  <name>darkcoinj Tools</name>
-  <description>A collection of useful tools that use the darkcoinj library to perform wallet operations</description>
+  <name>icashj Tools</name>
+  <description>A collection of useful tools that use the icashj library to perform wallet operations</description>
 
   <build>
 
@@ -74,7 +74,7 @@
   <dependencies>
     <dependency>
       <groupId>com.google</groupId>
-      <artifactId>darkcoinj</artifactId>
+      <artifactId>icashj</artifactId>
       <version>${project.parent.version}</version>
     </dependency>
     <dependency>
